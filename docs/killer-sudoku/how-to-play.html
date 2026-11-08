@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>How to Play - Killer Sudoku</title>
+    <style>
+      html {
+        color-scheme: light dark;
+        font-family: system-ui, sans-serif;
+        line-height: 1.65;
+      }
+      body {
+        max-width: 780px;
+        margin: auto;
+        padding: 24px;
+      }
+      a {
+        color: #007f78;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #819aa2;
+      }
+      h1,
+      h2 {
+        line-height: 1.25;
+      }
+      section {
+        padding: 20px 0;
+        border-bottom: 1px solid #819aa255;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      aside {
+        padding: 16px;
+        background: #008b8312;
+        border-radius: 12px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+      }
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #819aa2;
+        text-align: left;
+      }
+      .examples {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .example {
+        margin: 0;
+        max-width: 100%;
+        width: 210px;
+      }
+      .sample {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        border: 2px solid #819aa2;
+        aspect-ratio: 1;
+      }
+      .sample span {
+        display: grid;
+        place-items: center;
+        font-size: 0.8rem;
+        border-right: 1px solid #819aa255;
+        border-bottom: 1px solid #819aa255;
+      }
+      .sample .zone {
+        background: #008b8325;
+      }
+      .sample .selected {
+        background: #007f78;
+        color: white;
+      }
+      .sample span:nth-child(3n) {
+        border-right: 1px solid #819aa2;
+      }
+      .sample span:nth-child(n + 19):nth-child(-n + 27),
+      .sample span:nth-child(n + 46):nth-child(-n + 54) {
+        border-bottom: 1px solid #819aa2;
+      }
+      figcaption {
+        text-align: center;
+      }
+      @media (prefers-color-scheme: dark) {
+        a {
+          color: #71dcd2;
+        }
+      }
+      @media (max-width: 480px) {
+        body {
+          padding: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav aria-label="Killer Sudoku navigation">
+      <a href="../killer-sudoku">Play Killer Sudoku</a><a href="how-to-play.html">How to Play</a
+      ><a href="game-rules.html">Game Rules</a><a href="privacy-policy.html">Privacy Policy</a
+      ><a href="terms-of-use.html">Terms of Use</a>
+    </nav>
+    <main><img src="../killer-sudoku-app-icon.png" alt="Killer Sudoku app icon" width="56" height="56" style="margin-top:24px;border-radius:12px"><h1>How to Play</h1><p>Learn the controls and cage logic in the current Killer Sudoku web game.</p><section><h2>1. Choose your puzzle</h2><p>Select New game and choose Easy, Medium, Hard, Expert, Master, or Extreme. Selecting a difficulty replaces your current progress. Close the picker to keep playing the same puzzle.</p></section><section><h2>2. Read the cage totals</h2><p>Dashed outlines group cells into cages. The small number in a cage’s topmost, leftmost cell is its total. Fill the cage with different digits that add up to that total. A two-cell cage totaling 3 needs 1 and 2; a single-cell cage gives its cell’s answer directly.</p></section><section><h2>3. Apply the Sudoku rules</h2><p>Every row, column, and 3 &times; 3 box must contain digits 1 to 9 exactly once. Combine those rules with cage sums. A two-cell cage totaling 4 needs 1 and 3, because 2 and 2 would repeat a digit inside the cage.</p></section><section><h2>4. Select and enter</h2><p>Select an editable cell, then tap a number. Original bold clues cannot be changed. The selected cell’s row, column, and box are highlighted, as are matching digits. Use Erase to clear your entry and its notes. Outside Notes mode, number-pad digits appearing nine times are disabled.</p></section><section><h2>5. Record possibilities</h2><p>Turn Notes on, select an empty cell, and tap digits to toggle pencil marks. Turn Notes off to enter a final answer. A final entry clears the cell’s notes and matching notes in its row, column, and box. Cage-only candidates must be removed manually.</p></section><section><h2>6. Watch your lives and cage totals</h2><p>Every changed incorrect final answer removes one heart, even if there is no visible conflict. Red digits can indicate row, column, box, or cage duplicates, an exceeded cage total, or a filled cage with the wrong sum. Three mistakes end the game. Tapping the same value again adds no mistake.</p></section><section><h2>7. Reveal a hint</h2><p>Hints immediately fills the selected empty or incorrect editable cell. If that selection is fixed or correct, it fills the first empty or incorrect cell instead. You have three hints at every level. A reveal uses one hint, clears related notes, and gives no points.</p></section><section><h2>8. Pause, restart, or finish</h2><p>Pause hides the board and stops the timer. Resume game continues play. Restart keeps the same puzzle and cages while resetting your entries, notes, score, timer, lives, and hints. Fill every cell correctly to win. After a win or the third mistake, entries and hints are blocked.</p></section><section><h2>Keyboard controls</h2><p>Focus a board cell first. Press 1–9 to enter digits, use arrow keys to move, press Backspace, Delete, or 0 to erase, and press N to toggle Notes.</p></section><section><h2>Keep your current puzzle</h2><p>Progress is held only while the game page stays open. Reloading or navigating away discards it. Open help and legal links in a new browser tab to read them without leaving your puzzle.</p></section></main>
+  </body>
+</html>

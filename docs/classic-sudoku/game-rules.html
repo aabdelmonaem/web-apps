@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Game Rules - Sudoku Game</title>
+    <style>
+      html {
+        color-scheme: light dark;
+        font-family: system-ui, sans-serif;
+        line-height: 1.65;
+      }
+      body {
+        max-width: 780px;
+        margin: auto;
+        padding: 24px;
+      }
+      a {
+        color: #007f78;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #819aa2;
+      }
+      h1,
+      h2 {
+        line-height: 1.25;
+      }
+      section {
+        padding: 20px 0;
+        border-bottom: 1px solid #819aa255;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      aside {
+        padding: 16px;
+        background: #008b8312;
+        border-radius: 12px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+      }
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #819aa2;
+        text-align: left;
+      }
+      .examples {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .example {
+        margin: 0;
+        max-width: 100%;
+        width: 210px;
+      }
+      .sample {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        border: 2px solid #819aa2;
+        aspect-ratio: 1;
+      }
+      .sample span {
+        display: grid;
+        place-items: center;
+        font-size: 0.8rem;
+        border-right: 1px solid #819aa255;
+        border-bottom: 1px solid #819aa255;
+      }
+      .sample .zone {
+        background: #008b8325;
+      }
+      .sample .selected {
+        background: #007f78;
+        color: white;
+      }
+      .sample span:nth-child(3n) {
+        border-right: 1px solid #819aa2;
+      }
+      .sample span:nth-child(n + 19):nth-child(-n + 27),
+      .sample span:nth-child(n + 46):nth-child(-n + 54) {
+        border-bottom: 1px solid #819aa2;
+      }
+      figcaption {
+        text-align: center;
+      }
+      @media (prefers-color-scheme: dark) {
+        a {
+          color: #71dcd2;
+        }
+      }
+      @media (max-width: 480px) {
+        body {
+          padding: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav aria-label="Sudoku navigation">
+      <a href="../classic-sudoku">Play Sudoku</a>
+      <a href="how-to-play.html">How to Play</a><a href="game-rules.html">Game Rules</a>
+      <a href="privacy-policy.html">Privacy Policy</a><a href="terms-of-use.html">Terms of Use</a>
+    </nav>
+    <main><img src="../sudoku-app-icon.png" alt="Sudoku app icon" width="56" height="56" style="margin-top:24px;border-radius:12px"><h1>Game Rules</h1><p>The rules and controls of the current web version of Classic Sudoku.</p><section><h2>1. Complete the board</h2><p>Every row, column, and 3 × 3 box must contain 1–9 exactly once. Given clues cannot be changed. The puzzle is complete when all 81 cells match its solution.</p></section><section><h2>2. Entries and highlights</h2><p>Select a cell and enter a digit with Notes off. Editable entries can be replaced or erased. A selection highlights its row, column, box, and matching numbers. Red digits indicate duplicates. On the number pad, a digit appearing nine times is disabled outside Notes mode.</p></section><section><h2>3. Notes</h2><p>With Notes on, digits toggle pencil marks in empty editable cells. Notes do not change your score or lives. Any changed nonzero final entry, including an incorrect one, removes matching pencil marks from related cells. Erase clears the selected editable cell’s value and notes.</p></section><section><h2>4. Lives and mistakes</h2><p>You begin with three lives. A changed final entry that differs from the solution costs one life, even when it creates no duplicate. Re-entering the same value has no effect. Erasing does not restore lives. The third mistake ends play.</p></section><section><h2>5. Hints</h2><p>All six difficulties allow three hints. A hint immediately reveals the selected editable cell if it is empty or incorrect; otherwise it reveals the first empty or incorrect cell. It clears that cell’s notes and matching notes in its row, column, and box. Each reveal uses one hint, without changing score or lives. Hints are disabled when exhausted, paused, or finished.</p></section><section><h2>6. Score</h2><p>Each cell earns 100 points the first time you manually enter its correct answer, at every difficulty. Erasing and re-entering that answer does not earn more points. Mistakes, elapsed time, and hints do not deduct points. A hint itself earns no points; if you later erase that revealed answer and enter it correctly yourself, it can earn its one reward if it has not already done so.</p></section><section><h2>7. Difficulty</h2><p>All six levels are unlocked. New games are generated with a unique solution. Higher levels aim for fewer starting clues. The generator retains extra clues when needed to preserve uniqueness, so clue targets are not guaranteed and do not certify a particular solving technique.</p><table><caption>New-game clue targets</caption><thead><tr><th scope="col">Difficulty</th><th scope="col">Target clues</th><th scope="col">Hints</th></tr></thead><tbody><tr><th scope="row">Easy</th><td>50</td><td>3</td></tr><tr><th scope="row">Medium</th><td>40</td><td>3</td></tr><tr><th scope="row">Hard</th><td>32</td><td>3</td></tr><tr><th scope="row">Expert</th><td>26</td><td>3</td></tr><tr><th scope="row">Master</th><td>22</td><td>3</td></tr><tr><th scope="row">Extreme</th><td>17</td><td>3</td></tr></tbody></table></section><section><h2>8. Timer and pause</h2><p>The timer measures play in minutes and seconds. It stops while paused, while the difficulty picker is open, and after a win or game over. Pause hides the puzzle and blocks entries and hints. Use Pause when taking a break; switching browser tabs does not automatically pause the game.</p></section><section><h2>9. Restart and New game</h2><p>Restart keeps the current puzzle and difficulty. It clears entries, notes, and rewarded-cell history; resets score and time to zero; restores three lives and three hints; turns Notes off; and resumes play. New game replaces the puzzle after you select a difficulty. Closing the difficulty picker keeps your current progress.</p></section><section><h2>10. Completion and progress</h2><p>Solving every cell correctly wins the game. A win or third mistake blocks further number and hint input. Current progress is held only while the game page is open; reloading or navigating away discards it. Open help links in a new tab if you want to keep playing the current puzzle.</p></section><section><h2>Worked scoring example</h2><p>Enter five cells correctly for the first time: 500 points. Make two mistakes and reveal one hint: the score stays 500, one life remains, and two hints remain. Erase and re-enter one of those five rewarded answers: the score remains 500.</p></section></main>
+  </body>
+</html>
