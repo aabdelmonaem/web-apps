@@ -1,13 +1,74 @@
 <!doctype html>
 <html lang="en" data-beasties-container>
-<head>
-  <meta charset="utf-8">
-  <title>NgWebApps</title>
-  <base href="https://aabdelmonaem.github.io/web-apps/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<style>:root{color-scheme:light;--bg:#f5f6fa;--surface:#fff;--surface-soft:#edf0f7;--text:#20283f;--muted:#68728a;--border:#dfe4ee;--accent:#5956d6;--accent-soft:#eeedff;--shadow:0 12px 40px #20284908}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Segoe UI,system-ui,sans-serif;line-height:1.6}</style><link rel="stylesheet" href="styles-Z7SL3XKL.css" media="print" data-beasties-media="all"><noscript><link rel="stylesheet" href="styles-Z7SL3XKL.css"></noscript></head>
-<body>
-  <app-root></app-root>
-<script src="main-JPUS4XJF.js" type="module"></script><script>document.querySelectorAll('link[data-beasties-media]').forEach(function(l){l.media=l.getAttribute('data-beasties-media');l.removeAttribute('data-beasties-media')})</script></body>
+  <head>
+    <meta charset="utf-8" />
+    <title>web apps</title>
+    <base href="https://aabdelmonaem.github.io/web-apps/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script type="text/javascript">
+      (function (l) {
+        if (l.search[1] === "/") {
+          var decoded = l.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            l.pathname.slice(0, -1) + decoded + l.hash,
+          );
+        }
+      })(window.location);
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f6fa;
+        --surface: #fff;
+        --surface-soft: #edf0f7;
+        --text: #20283f;
+        --muted: #68728a;
+        --border: #dfe4ee;
+        --accent: #5956d6;
+        --accent-soft: #eeedff;
+        --shadow: 0 12px 40px #20284908;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          Segoe UI,
+          system-ui,
+          sans-serif;
+        line-height: 1.6;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="styles-Z7SL3XKL.css"
+      media="print"
+      data-beasties-media="all"
+    />
+    <noscript><link rel="stylesheet" href="styles-Z7SL3XKL.css" /></noscript>
+  </head>
+  <body>
+    <app-root></app-root>
+    <script src="main-JPUS4XJF.js" type="module"></script>
+    <script>
+      document
+        .querySelectorAll("link[data-beasties-media]")
+        .forEach(function (l) {
+          l.media = l.getAttribute("data-beasties-media");
+          l.removeAttribute("data-beasties-media");
+        });
+    </script>
+  </body>
 </html>
