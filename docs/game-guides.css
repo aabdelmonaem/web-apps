@@ -1,0 +1,42 @@
+:root {
+  color-scheme: light dark;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.7;
+}
+body {
+  max-width: 780px;
+  margin: auto;
+  padding: 24px;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #8a899e;
+}
+a {
+  color: #5956d6;
+}
+h1,
+h2 {
+  line-height: 1.25;
+}
+h1 {
+  font-size: clamp(2rem, 7vw, 3rem);
+  letter-spacing: -0.04em;
+}
+h2 {
+  margin-top: 2em;
+  font-size: 1.25rem;
+}
+.eyebrow {
+  margin-top: 32px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+@media (prefers-color-scheme: dark) {
+  a {
+    color: #aaa5ff;
+  }
+}
